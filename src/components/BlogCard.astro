@@ -1,0 +1,79 @@
+
+---
+
+export interface Props {
+    img: string;
+	title: string;
+	body: string;
+	href: string;
+}
+
+
+const { href,img , title, body } = Astro.props;
+
+---
+
+<li class="BlogCardStyle BlogCardStyleDark ">
+	<a href={href}>
+        <img src= {img} >
+		<h2>
+			{title}
+			<span>&rarr;</span>
+		</h2>
+		<p>
+			{body}
+		</p>
+	</a>
+</li>
+
+<style>
+
+	.BlogCardStyle {
+		list-style: none;
+		display: flex;
+		padding: 0.25rem;
+		background-color: white;
+		background-size: 400%;
+		border-radius: 0.6rem;
+		background-position: 100%;
+		transition: all 0.7s ease-out;
+		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+	} 
+
+	.BlogCardStyle:hover{
+		transform: scale(102%);
+
+	}
+
+
+	.BlogCardStyle > a {
+		width: 100%;
+		text-decoration: none;
+		line-height: 1.4;
+		padding:  1rem;
+		border-radius: 0.35rem;
+		color: var(--blackColor);
+		opacity: 0.8;
+	}
+
+    img {
+        position: relative;
+        width: 100%;
+    }
+
+	h2 {
+		margin: 0;
+		font-size: 1.25rem;
+		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		color: var(--blackColor);
+
+	}
+	p {
+		margin-top: 0.5rem;
+		margin-bottom: 0;
+		color: var(--blackColor);
+	}
+
+
+</style>

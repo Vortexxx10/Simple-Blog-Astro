@@ -1,0 +1,162 @@
+---
+ 
+
+---
+
+<nav>
+    <div class="logo"> 
+        <a href="">
+            <h3>
+                <span>WAYT </span>
+                Agency
+            </h3>
+
+        </a>  
+    </div>
+    <ul>
+        <li><a href="">Blog</a></li>
+        <li><a href="">About</a></li>
+    </ul>
+
+    <div  id="theme" class:list={["theme"]}>
+      <img src="/public/img/dark_mode_FILL0_wght700_GRAD200_opsz48.png" alt="">
+    </div>
+        
+    
+</nav>
+
+
+<script  >
+     
+    const themeBtn = document.querySelector('.theme img')
+    const aTag =  document.querySelectorAll("a");
+    const navBar = document.querySelector('nav');
+    
+    themeBtn.addEventListener('click',function ChangeTheme(){
+        themeBtn.classList.toggle("active");
+        for (const tag of aTag) {
+            tag.classList.toggle("ligthWrithe");
+        }
+        document.body.classList.toggle("darkBody");
+        navBar.classList.toggle("darkNavBar");
+        
+    });
+
+    
+</script>
+
+
+<style>
+    
+
+    :root{
+        --bleueColor: #058fdf;
+    }
+    
+ 
+    #theme{
+        position: absolute;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        top: 50%;
+        right: 5%;
+        transform: translate(0, -50%);
+        border-radius: 20px;
+
+    
+
+    }
+
+    #theme img{
+        width: 100%;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    
+    .active{
+        filter:contrast(0); 
+    }
+
+    nav{
+        position: fixed;;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 0  2% 0 0;
+        margin: 0;
+        width: 100%;
+        height: 3rem;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        background-color: #fff;
+        transition: all 0.5s ;
+    }
+
+    .darkNavBar{
+        background: #ffffff2d;
+    }
+    
+    .logo{
+        position: relative;
+        align-items: center;
+        display: flex;
+    }
+    
+    .logo span{
+        color: var(--bleueColor);
+    }
+
+
+    ul{
+        position: relative;
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+        width: auto;
+        align-items: center;
+    }
+
+    li {
+        list-style: none;
+        margin: 0 1rem 0 1rem;
+    }
+
+    a{
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: var(--blackColor);
+
+    }
+
+    li a{
+        transition: all 0.5s;
+    }
+
+    li a:hover{
+        color: var(--bleueColor);
+    }
+
+    @media screen  and (max-width: 768px ){
+
+        #theme{
+        position: fixed;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        top: 10%;
+        right: 5%;
+        transform: translate(0, -50%);
+        border-radius: 20px;
+        }
+
+        a{
+        text-decoration: none;
+        font-size: 1rem;
+       
+        }
+
+    }
+
+</style>

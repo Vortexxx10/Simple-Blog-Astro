@@ -1,0 +1,33 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/public/svg/book.svg" />				
+
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="Body">
+		<slot />
+	</body>
+</html>
+
+
+<style is:global>
+
+	@import "../style/global.css";
+
+	
+
+</style>
+
+

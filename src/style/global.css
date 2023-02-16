@@ -1,0 +1,33 @@
+
+:root {
+    --ligthTheme:  #f7f7f7;
+    --darktheme: #08080a;
+    --blackColor: black;
+    --accent: 24, 58, 237;
+    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #fd9813 30%, white 60%);
+}
+html {
+    font-family: -ui, sans-serif;
+}
+
+.darkBody{
+    background: var(--darktheme);
+}
+
+.ligthWrithe{
+    color: var(--ligthTheme) ;
+}
+
+
+body{
+    background: var(--ligthTheme);
+    transition: all 0.5s ease-out;
+}
+code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+        Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+@media screen  and (max-width: 768px ){
+   
+}

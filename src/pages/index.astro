@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavBar from '../layouts/NavBar.astro';
+import Card from '../components/Card.astro';
+import BlogCard from '../components/BlogCard.astro';
+
+
+
+---
+
+<Layout title="Home">
+
+	<NavBar />
+
+	
+	<main>
+		<h1 class="title">Recent<span>&rarr;</span></h1>
+	
+		<ul role="list" class="link-card-grid">
+			<BlogCard 
+				href=""
+				img="/public/img/pexels-anete-lusina-4793154.jpg"
+				title="Creat a nice digital Content"
+				body="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, dolores?"
+				
+			/>
+
+			<BlogCard 
+				href=""
+				img="/public/img/pexels-pixabay-270637.jpg"
+				title="SEO"
+				body="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, dolores?"
+			/>
+			
+			<BlogCard 
+				href=""
+				img="/public/img/pexels-george-milton-6954220.jpg"
+				title="Blog"
+				body=" lorem ipsum  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, dolores? dolor sit amet"
+			/>
+			<BlogCard 
+				href=""
+				img="/public/img/pexels-pixabay-267371.jpg"
+				title="Blog"
+				body=" Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, dolores? lorem ipsum  dolor sit amet"
+			/>
+			<BlogCard 
+				href=""
+				img="/public/img/pexels-pixabay-267392.jpg"
+				title="Blog"
+				body=" Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, dolores? sit amet"
+			/>
+
+		</ul>
+		<ul>
+			<Card href="" title="View More" body=""/>
+		</ul>
+	</main>
+</Layout>
+
+
+
+
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 100ch;
+		margin-top: 3rem;
+		color: var(--ligthTheme);
+
+	}
+
+	.title{
+		color: black;
+		font-size: 2.5rem;
+	}
+
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(12rem, 2fr));
+		gap: 3rem;
+		padding: 0;
+	}
+
+	
+	
+	
+
+</style>
