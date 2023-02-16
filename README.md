@@ -1,8 +1,10 @@
 # Astro Projet: Wayt Agency Blog
 version 1.1.0 at this commit
-```
-npm create astro@latest -- --template basics
-```
+
+## Layouts
+
+![Screenshots of projets layout](blogLigthTheme1.png)![Screenshots of projets layout](blogLigthTheme2.png)
+![Screenshots of projets layout](blogDarkTheme.png)
 
 ## 🚀 Project Structure
 
