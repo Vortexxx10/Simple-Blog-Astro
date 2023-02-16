@@ -1,6 +1,5 @@
-# Astro Starter Kit: Basics transform
+# Astro Projet: Wayt Agency Blog
 version 1.1.0 at this commit
-
 ```
 npm create astro@latest -- --template basics
 ```
@@ -37,8 +36,9 @@ Inside of this Astro project, you'll see the following folders and files:
 |        └── theme.astro //(not used)
 |   
 └── package.json
+
 ```
---------------------------##Tools##---------------------------------------
+## Tools
 
 "public/" directory is consecrated to all static assets, like images or svg.
 
